@@ -6,26 +6,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body{
-            background-color: rgb(183, 226, 250);
-           
-        }
-        .first{
-            color:rgb(237, 19, 19);
-            width:500px;
-            margin-left:400px;
-            background-color:rgb(234, 234, 113);
-            padding: 50px;
-            border: 3px solid black;
-            
-        }
-       
+      body {
+        font-family: sans-serif;
+        background-color: #111d4a;
         
+        }
+        * {
+            box-sizing: border-box;
+          }
+
+
+.character {
+    list-style-type: none;
+    background-color: #eaeaea;
+    border-radius: 3px;
+    padding: 10px 20px;
+gap:10px;
+}
+#characterList{
+    margin-top: 40px;
+              display: grid;
+   
+              grid-template-columns: repeat(auto-fit,minmax(500px,1fr));
+             gap:20px;
+             justify-items: center;
+}
+.character{
+    padding: 10px;
+    width:500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+       
+        #searchBar{
+            width: 50%;
+            height:50px;
+            border-radius: 5px;
+            border:1px solid #eaeaea;
+            padding:5px 10px;
+            font-size: 20px;
+            position: relative;
+          left: 25%;
+          bottom: 20px;
+          top: 10px;
+          box-shadow: 10px 5px 10px 0 ;
+
+        }
     </style>
 </head>
-<body>
 
- 
+<body>
+   
+    <input id="searchBar" name="searchBar" type="text" placeholder="Seacrh Here" />
+    <ul id="characterList"></ul>
+
 </body>
 <script src="script.js"></script>
 </html>
